@@ -1,9 +1,9 @@
-jobs:
-  include:
-    - os: windows
-      language: c
-      arch: amd64
-      script:
-        - clang -coverage -O0 hello_world.c -o hello_world
-        - ./hello_world
-
+os: linux
+dist: xenial
+language: python
+python:
+  - "3.8"
+  - "3.7"
+script:
+   - python hello_world.py
+   - python hello_world.py
